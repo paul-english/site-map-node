@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1" />
+<meta name="keywords" content="clients, mindbody, mind body, software, mbsw, mb online, mindbody online, about, web scheduler, schedule, california, yoga, PilateSoft, StudioSoft, Therapy Software, Pilates,Dance , Studio, Therapy, Studio Owner, studio management, POS, POS software, Retail, Client Management , Yoga, PilateSoft Online, business, appointments, classes, workshops, booking, reservation, purchase, complete"> 
+<meta name="description" content="MindBody Software began in 1998 as a small software consultancy, providing custom studio management solutions to Yoga, Pilates and Spinning studios. We have grown rapidly since those early days. Today, MindBody Software assist Yoga and Pilates Studios as well as Retreat Centers, Day Spas, Dance Studios and Personal Trainers looking to transform their businesses. ">
+<meta name="robots" content="index,follow">  
+<meta name="revisit-after" content="15 days">
+<title>MINDBODY - Local Dev</title>
+<LINK REL="ICON" HREF="/favicon.ico">
+<LINK REL="SHORTCUT ICON" HREF="/favicon.ico">
+<script type="text/javascript">
+function loadDDs() { 
+	mainFrame.document.frmClients.txtBusinessName.select();
+		mainFrame.addOption(mainFrame.document.frmClients.optCountry, "US", "UNITED STATES", "");
+
+	ChangeCountry();
+}
+function ChangeCountry() {
+	mainFrame.removeAllOptions(mainFrame.document.frmClients.optStateProv);
+        mainFrame.addOption(mainFrame.document.frmClients.optStateProv, "", "", "");
+	if (mainFrame.document.frmClients.optCountry.value != '') {
+		mainFrame.document.getElementById('stprov').style.display = '';
+
+		if(mainFrame.document.frmClients.optCountry.value == 'US'){
+
+			mainFrame.addOption(mainFrame.document.frmClients.optStateProv,"US|CA", 'CALIFORNIA');
+
+		}
+	} else {
+		mainFrame.document.getElementById('stprov').style.display = 'none';
+	}
+	
+	ChangeStateProv();
+}
+function ChangeStateProv() {
+	mainFrame.removeAllOptions(mainFrame.document.frmClients.optCity);
+        mainFrame.addOption(mainFrame.document.frmClients.optCity, "", "", "");
+
+	if (mainFrame.document.frmClients.optStateProv.value != '') {
+		mainFrame.document.getElementById('cty').style.display = '';
+
+		if(mainFrame.document.frmClients.optStateProv.value=='US|CA') {
+
+			mainFrame.addOption(mainFrame.document.frmClients.optCity,"SAN LUIS OBISPO", "SAN LUIS OBISPO");
+
+			mainFrame.addOption(mainFrame.document.frmClients.optCity,"SLO", "SLO");
+
+		}
+	} else {
+		mainFrame.document.getElementById('cty').style.display = 'none';
+	}
+}
+</script>
+</head>
+<frameset id="mainFrameset" cols="100%,*" frameborder="no" framespacing="0"> 
+	<frame name="mainFrame" src="asp/default_main.asp?lan=" frameborder="NO"  scrolling="YES">
+
+	<frame src="asp/blank.htm"></frame>
+</frameset>
+<noframes></noframes>
+</html>
+<a href="http://ebay.com">?!</a>
+<a href="http://ebay.com/">?!</a>
+<a href="http://ebay.com/route?stuff=woah&nonsense=ok">?!</a>
